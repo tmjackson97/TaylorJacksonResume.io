@@ -75,7 +75,6 @@
     color: white;
   }
 
-  /* PRINT BUTTON */
   .actions {
     position: absolute;
     top: 24px;
@@ -99,7 +98,6 @@
     transform: translateY(-1px);
   }
 
-  /* CONTENT */
   .content {
     padding: 48px;
   }
@@ -221,22 +219,30 @@
     }
   }
 
-  /* PRINT */
-  @media print {
-    .actions {
-      display: none !important;
-    }
-
-    body {
-      background: #ffffff;
-      padding: 0;
-    }
-
-    .container {
-      box-shadow: none;
-      border-radius: 0;
-    }
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
+  .header {
+    background: #3c40c2 !important;
+    color: #ffffff !important;
+  }
+
+  .actions {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+    padding: 0;
+  }
+
+  .container {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
 </style>
 
   
@@ -375,6 +381,7 @@
   </div>
 </body>
 </html>
+
 
 
 
