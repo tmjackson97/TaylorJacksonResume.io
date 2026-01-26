@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taylor Jackson - Resume</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      background: #f8f9fa;
+      color: #1a1a1a;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #434656 0%, #3c40c2 100%);
+      color: white;
+      padding: 48px 48px 40px;
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+    
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.3);
+      object-fit: cover;
+    }
+    
+    .header-text h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    
+    .header-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .header-links a {
+      color: rgba(255,255,255,0.95);
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+    
+    .header-links a:hover {
+      color: white;
+    }
+    
+    .contact-info {
+      display: flex;
+      gap: 32px;
+      font-size: 15px;
+      opacity: 0.95;
+      flex-wrap: wrap;
+    }
+    
+    .content {
+      padding: 48px;
+    }
+    
+    section {
+      margin-bottom: 40px;
+    }
+    
+    section:last-child {
+      margin-bottom: 0;
+    }
+    
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 14px;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 8px;
+    }
+    
+    p {
+      margin-bottom: 16px;
+      color: #4a4a4a;
+      font-size: 15px;
+    }
+    
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .skills-list li,
+    .cert-list li {
+      padding: 10px 0 10px 24px;
+      position: relative;
+      color: #070606;
+      font-size: 15px;
+    }
+    
+    .skills-list li:before,
+    .cert-list li:before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-weight: bold;
+    }
+    
+    .experience-item,
+    .education-item {
+      margin-bottom: 28px;
+    }
+    
+    .experience-item:last-child,
+    .education-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .job-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+    
+    .job-meta {
+      font-size: 14px;
+      color: #272727;
+      margin-bottom: 12px;
+    }
+    
+    .experience-item ul li {
+      padding: 6px 0 6px 24px;
+      position: relative;
+      color: #4a4a4a;
+      font-size: 15px;
+    }
+    
+    .experience-item ul li:before {
+      content: "•";
+      position: absolute;
+      left: 8px;
+      color: #667eea;
+      font-weight: bold;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+      
+      .header,
+      .content {
+        padding: 32px 24px;
+      }
+      
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<div class="container">
+    <header class="header">
+      <div class="header-content">
+        <img src="profilepic.jpg" alt="Taylor Jackson" class="profile-image">
+        <div class="header-text">
+          <h1>Taylor Jackson</h1>
+          <div class="location">Fayetteville, North Carolina</div>
+          <div class="header-links">
+            <a href="mailto:tmjackson97@gmail.com">tmjackson97@gmail.com</a>
+            <span class="separator">|</span>
+            <a href="https://www.linkedin.com/in/taylorjacksonnc/">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="content">
+      <section>
+        <h2>Summary</h2>
+        <p>Security-minded and technically curious IT professional with a hands-on, problem-solving approach to technology. CompTIA Security+ certified, with experience across networking, systems, and cybersecurity through real-world labs and practical training. Known for adaptability, attention to detail, and a strong interest in understanding how systems work and how to make them more reliable and secure. Motivated by continuous learning and contributing to effective, resilient technical environments.</p>
+      </section>
+      
+      <section>
+        <h2>Technical Skills</h2>
+        <ul class="skills-list">
+          <li>Security Monitoring: Log analysis, triage, and escalation</li>
+          <li>Networking: Routers, switches, VPNs, firewalls, wireless infrastructure</li>
+          <li>Troubleshooting: Hardware (PCs, laptops, printers), software, remote diagnostics</li>
+          <li>Operating Systems: Windows, Linux (Ubuntu, Kali)</li>
+          <li>Security Tools: Wireshark, Nmap, Metasploit, Nessus, Burp Suite, Splunk, Elastic Stack, Suricata, Snort, Autopsy, FTK Imager</li>
+          <li>Programming/Scripting: Python, Bash, PowerShell</li>
+        </ul>
+      </section>
+      
+      <section>
+        <h2>Certifications</h2>
+        <ul class="cert-list">
+          <li>CompTIA Security+ (SY0-701) - Issued July 2024</li>
+        </ul>
+      </section>
+      
+      <section>
+        <h2>Experience</h2>
+        
+        <div class="experience-item">
+          <div class="job-title">Freelance Projects and Home Labs</div>
+          <div class="job-meta">Remote | 2021–Present</div>
+          <ul>
+            <li>Identified and documented 10+ exposed ICS/OT Automated Tank Gauge (ATG) systems through OSINT tools such as Shodan, demonstrating passive reconnaissance and critical infrastructure risk assessment.</li>
+            <li>Submitted a coordinated vulnerability disclosure to CISA, following industry-standard responsible disclosure practices and highlighting systemic misconfigurations affecting multiple critical infrastructure sites.</li>
+            <li>Investigated Windows-based endpoint and network threats by analyzing logs in Splunk and Elastic Stack.</li>
+            <li>Built and managed a virtual home lab environment simulating enterprise networks to practice incident response and detection workflows.</li>
+            <li>Configured and fine-tuned Suricata and Snort for IDS/IPS use cases; analyzed alerts and improved rule sets based on threat behavior.</li>
+            <li>Developed and tested YARA rules for identifying malicious files and anomalous patterns during malware analysis exercises.</li>
+            <li>Conducted hands-on adversary emulation using tools such as Responder, Mimikatz, and Wireshark to better understand lateral movement and credential attacks.</li>
+          </ul>
+        </div>
+        
+        <div class="experience-item">
+          <div class="job-title">Bartender</div>
+          <div class="job-meta">Circa 1800, Fayetteville, NC | May 2018–Present</div>
+          <ul>
+            <li>Provided excellent customer service in a fast-paced environment, demonstrating strong communication and interpersonal skills.</li>
+            <li>Managed cash and credit transactions accurately, ensuring accountability and attention to detail.</li>
+            <li>Trained new staff on company policies and procedures, showcasing leadership and teamwork abilities.</li>
+          </ul>
+        </div>
+        
+        <div class="experience-item">
+          <div class="job-title">Service Clerk</div>
+          <div class="job-meta">Postnet, Lumberton, NC | Sep 2012–Mar 2022</div>
+          <ul>
+            <li>Troubleshot computers and computer peripherals for store operations.</li>
+            <li>Provided guidance to customers on printing, graphic design, and shipping services.</li>
+            <li>Used Adobe Creative Cloud (Photoshop) and Microsoft 365 programs daily.</li>
+          </ul>
+        </div>
+      </section>
+      
+      <section>
+        <h2>Education</h2>
+        <div class="education-item">
+          <div class="job-title">Associate of Applied Science in IT/Cybersecurity</div>
+          <div class="job-meta">Fayetteville Technical Community College | Expected Dec 2026</div>
+        </div>
+        <div class="education-item">
+          <div class="job-title">High School Diploma</div>
+          <div class="job-meta">Robeson Community College | 2016</div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
