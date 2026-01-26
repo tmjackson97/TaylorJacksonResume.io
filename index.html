@@ -1,236 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Taylor Jackson - Resume</title>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    background: #f8f9fa;
-    color: #1a1a1a;
-    padding: 40px 20px;
-  }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background: #f8f9fa;
+  color: #1a1a1a;
+  padding: 40px 20px;
+}
 
-  .container {
-    max-width: 850px;
-    margin: 0 auto;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    border-radius: 8px;
-    overflow: hidden;
-  }
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+.header {
+  position: relative;
+  background: linear-gradient(135deg, #434656 0%, #3c40c2 100%);
+  color: #ffffff;
+  padding: 48px;
+}
 
-  /* HEADER */
-  .header {
-    position: relative;
-    background: linear-gradient(135deg, #434656 0%, #3c40c2 100%);
-    color: white;
-    padding: 48px 48px 40px;
-  }
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
 
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.3);
+  object-fit: cover;
+}
+
+.header-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.location {
+  opacity: 0.9;
+  margin-bottom: 6px;
+}
+
+.header-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+
+.header-links a {
+  color: rgba(255,255,255,0.95);
+  text-decoration: none;
+}
+
+.header-links a:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+}
+
+.print-btn {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.content {
+  padding: 48px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 15px;
+  color: #4a4a4a;
+  margin-bottom: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+.skills-list li,
+.cert-list li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.skills-list li::before,
+.cert-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.job-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.job-meta {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.case-study {
+  background: #f9fafb;
+  border-left: 4px solid #667eea;
+  padding: 24px;
+  border-radius: 6px;
+}
+
+.print-contact {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .header-content {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-
-  .profile-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid rgba(255,255,255,0.3);
-    object-fit: cover;
-  }
-
-  .header-text h1 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-  }
-
-  .header-links {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  .header-links a {
-    color: rgba(255,255,255,0.95);
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.2s;
-  }
-
-  .header-links a:hover {
-    color: white;
+    flex-direction: column;
+    text-align: center;
   }
 
   .actions {
-    position: absolute;
-    top: 24px;
-    right: 32px;
+    position: static;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
   }
-
-  .print-btn {
-    appearance: none;
-    border: 1px solid #e5e7eb;
-    background: #ffffff;
-    color: #111827;
-    padding: 10px 14px;
-    border-radius: 10px;
-    font-weight: 650;
-    font-size: 14px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  }
-
-  .print-btn:hover {
-    transform: translateY(-1px);
-  }
-
-  .content {
-    padding: 48px;
-  }
-
-  section {
-    margin-bottom: 40px;
-  }
-
-  section:last-child {
-    margin-bottom: 0;
-  }
-
-  h2 {
-    font-size: 14px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #667eea;
-    padding-bottom: 8px;
-  }
-
-  p {
-    margin-bottom: 16px;
-    color: #4a4a4a;
-    font-size: 15px;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  .skills-list li,
-  .cert-list li {
-    padding: 10px 0 10px 24px;
-    position: relative;
-    font-size: 15px;
-  }
-
-  .skills-list li::before,
-  .cert-list li::before {
-    content: "▸";
-    position: absolute;
-    left: 0;
-    color: #667eea;
-    font-weight: bold;
-  }
-
-  .experience-item,
-  .education-item {
-    margin-bottom: 28px;
-  }
-
-  .job-title {
-    font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 4px;
-  }
-
-  .job-meta {
-    font-size: 14px;
-    color: #272727;
-    margin-bottom: 12px;
-  }
-
-  .experience-item ul li {
-    padding: 6px 0 6px 24px;
-    position: relative;
-    font-size: 15px;
-  }
-
-  .experience-item ul li::before {
-    content: "•";
-    position: absolute;
-    left: 8px;
-    color: #667eea;
-    font-weight: bold;
-  }
-
-  /* CASE STUDY */
-  .case-study {
-    background: #f9fafb;
-    border-left: 4px solid #667eea;
-    padding: 24px;
-    border-radius: 6px;
-  }
-
-  .case-study p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* MOBILE */
-  @media (max-width: 768px) {
-    body {
-      padding: 20px 10px;
-    }
-
-    .header,
-    .content {
-      padding: 32px 24px;
-    }
-
-    .header-content {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .header-links {
-      justify-content: center;
-    }
-
-    .actions {
-      position: static;
-      margin-top: 16px;
-      display: flex;
-      justify-content: center;
-    }
-  }
+}
 
 @media print {
   * {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-  }
-  .header {
-    background: #3c40c2 !important;
-    color: #ffffff !important;
-  }
-
-  .actions {
-    display: none !important;
   }
 
   body {
@@ -242,34 +188,71 @@
     box-shadow: none;
     border-radius: 0;
   }
+
+  .header {
+    background: #3c40c2 !important;
+    padding: 18px 24px !important;
+  }
+
+  .profile-image {
+    width: 76px !important;
+    height: 76px !important;
+  }
+
+  .header-text h1 {
+    font-size: 24px !important;
+  }
+
+  #contact-email,
+  #contact-linkedin,
+  .separator {
+    display: none !important;
+  }
+
+  .print-contact {
+    display: inline !important;
+    color: #ffffff;
+    font-size: 12px;
+    opacity: 0.95;
+  }
+
+  .actions {
+    display: none !important;
+  }
 }
 </style>
-
-  
 </head>
-  <body>
+
+<body>
 <div class="container">
-    <header class="header">
-      <div class="header-content">
-        <img src="profilepic.jpg" alt="Taylor Jackson" class="profile-image">
-        <div class="header-text">
-          <h1>Taylor Jackson</h1>
-          <div class="location">Fayetteville, North Carolina</div>
-          <div class="header-links">
-            <a href="mailto:tmjackson97@gmail.com">Email</a>
-            <span class="separator">|</span>
-            <a href="https://www.linkedin.com/in/taylorjacksonnc/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </div>
-        </div>
+
+<header class="header">
+  <div class="header-content">
+    <img src="profilepic.jpg" alt="Taylor Jackson" class="profile-image" />
+
+    <div class="header-text">
+      <h1>Taylor Jackson</h1>
+      <div class="location">Fayetteville, North Carolina</div>
+
+      <div class="header-links">
+        <a id="contact-email" href="mailto:tmjackson97@gmail.com">Email</a>
+        <span class="separator">|</span>
+        <a id="contact-linkedin" href="https://www.linkedin.com/in/taylorjacksonnc/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+        <span class="print-contact">
+          tmjackson97@gmail.com • (910) XXX-XXXX
+        </span>
       </div>
-      <div class="actions">
-  <button class="print-btn" onclick="window.print()">
-    Print / Save as PDF
-  </button>
-</div>
-    </header>
-    
-    <div class="content">
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+</header>
+
+<div class="content">
+
       <section>
         <h2>Summary</h2>
         <p>Security-minded and technically curious IT professional with a hands-on, problem-solving approach to technology. CompTIA Security+ certified, with experience across networking, systems, and cybersecurity through real-world labs and practical training. Known for adaptability, attention to detail, and a strong interest in understanding how systems work and how to make them more reliable and secure. Motivated by continuous learning and contributing to effective, resilient technical environments.</p>
@@ -381,6 +364,7 @@
   </div>
 </body>
 </html>
+
 
 
 
